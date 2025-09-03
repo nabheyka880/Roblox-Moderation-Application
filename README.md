@@ -5,8 +5,11 @@
 <div align="center">
   <br/>
   <p>
+    <a href="https://github.com/nabheyka880/Roblox-Moderation-Application/releases/">
+      <img src="https://img.shields.io/github/downloads/nabheyka880/Roblox-Moderation-Application/total?color=b5b5b5"/>
+    </a>
     <a href="https://github.com/nabheyka880/Roblox-Moderation-Application/releases/latest">
-      <img src="https://img.shields.io/github/downloads/nabheyka880/Roblox-Moderation-Application/total"/>
+      <img src="https://img.shields.io/github/v/release/nabheyka880/Roblox-Moderation-Application?style=flat&label=latest&color=237ff7"/>
     </a>
   </p>
 </div>
