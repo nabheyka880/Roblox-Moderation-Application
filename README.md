@@ -1,6 +1,15 @@
 <div align="center">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Roblox_Corporation_2025_logo.svg/640px-Roblox_Corporation_2025_logo.svg.png" Height="300" align="center" />
 </div>
+
+<div align="center">
+  <br/>
+  <p>
+    <a href="https://github.com/nabheyka880/Roblox-Moderation-Application/releases/latest">
+      <img src="https://img.shields.io/github/downloads/nabheyka880/Roblox-Moderation-Application/total"/>
+    </a>
+  </p>
+</div>
   
 # // ROBLOX Moderation Application //
 
