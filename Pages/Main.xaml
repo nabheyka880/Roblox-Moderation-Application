@@ -13,7 +13,7 @@
         <ui:TextBox x:Key="UserIDTextBox" PlaceholderText="insert user ID" Width="350" TextAlignment="Center" TextChanged="IDChanged"/>
         <ui:TextBox x:Key="ReasonTextBox" PlaceholderText="insert reason here" Width="350" TextAlignment="Center"/>
         <ui:TextBox x:Key="PrivReasonTextBox" PlaceholderText="insert priv reason here" Width="350" TextAlignment="Center"/>
-        <ui:TextBox x:Key="DurationTextBox" PlaceholderText="insert duration here" Width="350" TextAlignment="Center"/>
+        <ui:TextBox x:Key="DurationTextBox" PlaceholderText="insert duration here" Width="350" TextAlignment="Center" TextChanged="DurationChanged"/>
     </ScrollViewer.Resources>
 
     <Grid Style="{StaticResource MarginGrid}" VerticalAlignment="Center">

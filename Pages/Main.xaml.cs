@@ -118,6 +118,11 @@ namespace Roblox_Moderation_Application_WPF.Pages
             Info.Permanent = PermanentCheckBox.IsChecked;
         }
 
+        private void DurationChanged(object sender, RoutedEventArgs e)
+        {
+            Info.Duration = ((Wpf.Ui.Controls.TextBox)this.Resources["DurationTextBox"]).Text;
+        }
+
         public async void BanClicked(object sender, RoutedEventArgs e)
         {
             SuccessInfo.IsOpen = false;
