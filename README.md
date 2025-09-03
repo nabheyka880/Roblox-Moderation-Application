@@ -55,5 +55,4 @@ Sometimes, an error may occur in the Main page when typing in the player's user 
 - `Error code 503 / UNAVAILABLE`: This happens when the service is unavailable, that is mostly caused due to the server being down. This is most likely an issue that will not occur. But if it does, it is most likely a ROBLOX issue, and the only solution is to wait until ROBLOX fixes this issue.
 
 # How was this made?
-You can check the Credits section in the Settings page for the workflows. But if you don't want to:
-- [WPF UI](https://wpfui.lepo.co/)
+This project was made with [WPF UI](https://wpfui.lepo.co/) using the WPF Application project in Visual Studio.
