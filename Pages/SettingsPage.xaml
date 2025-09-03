@@ -1,0 +1,48 @@
+﻿<ScrollViewer x:Class="Roblox_Moderation_Application_WPF.Pages.SettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Roblox_Moderation_Application_WPF.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+      xmlns:controls="clr-namespace:Roblox_Moderation_Application_WPF.Controls">
+
+    <ScrollViewer.Resources>
+        <ui:TextBox x:Key="ApiKeyTextBox" PlaceholderText="insert API key here" TextAlignment="Center" Width="350"/>
+        <ui:TextBox x:Key="UniverseIDText" PlaceholderText="insert universe ID" Width="350" TextAlignment="Center"/>
+    </ScrollViewer.Resources>
+
+    <Grid Style="{StaticResource MarginGrid}" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0, 0, 0, 15">
+            <ui:InfoBar Message="Successfully saved settings." Severity="Success" x:Name="SuccessInfo"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Grid.Row="1">
+            <ui:TextBlock Style="{StaticResource LargeTextBlock}" Foreground="White" Text="Settings"/>
+            <ui:TextBlock Style="{StaticResource DescriptionPageTxt}" Opacity="0.2" Foreground="White" Text="The page where things get saved, I guess."/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Margin="0, 8, 0, 0">
+            <controls:BetterCard Header="API Key" Description="Your Roblox API Key. This is necessary to use this application." CardContent="{StaticResource ApiKeyTextBox}">
+            </controls:BetterCard>
+
+            <controls:BetterCard Header="Universe ID" Description="The ID of the universe you want to ban players from." CardContent="{StaticResource UniverseIDText}">
+            </controls:BetterCard>
+
+            <ui:Button Margin="0, 5, 0, 0" Height="40" Width="871" Background="{StaticResource BlueBackground}" Click="SavedSettings">
+                <StackPanel Orientation="Horizontal">
+                    <ui:SymbolIcon Symbol="Save28"/>
+                    <ui:TextBlock Text="Save Settings" Margin="10, 0, 0, 0"/>
+                </StackPanel>
+            </ui:Button>
+        </StackPanel>
+    </Grid>
+</ScrollViewer>

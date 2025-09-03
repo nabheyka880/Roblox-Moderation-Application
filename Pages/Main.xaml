@@ -1,0 +1,103 @@
+﻿<ScrollViewer x:Class="Roblox_Moderation_Application_WPF.Pages.Main"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Roblox_Moderation_Application_WPF.Pages"
+      xmlns:controls="clr-namespace:Roblox_Moderation_Application_WPF.Controls"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml">
+
+    <ScrollViewer.Resources>
+        <ui:TextBox x:Key="UserIDTextBox" PlaceholderText="insert user ID" Width="350" TextAlignment="Center" TextChanged="IDChanged"/>
+        <ui:TextBox x:Key="ReasonTextBox" PlaceholderText="insert reason here" Width="350" TextAlignment="Center"/>
+        <ui:TextBox x:Key="PrivReasonTextBox" PlaceholderText="insert priv reason here" Width="350" TextAlignment="Center"/>
+        <ui:TextBox x:Key="DurationTextBox" PlaceholderText="insert duration here" Width="350" TextAlignment="Center"/>
+    </ScrollViewer.Resources>
+
+    <Grid Style="{StaticResource MarginGrid}" VerticalAlignment="Center">
+
+        <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0, 0, 0, 10">
+            <ui:InfoBar Severity="Success" x:Name="SuccessInfo" Title="Success" Message="Successfully banned the player." IsOpen="False"/>
+            <ui:InfoBar Severity="Error" x:Name="ErrorInfo" Message="An error occured while trying to perform the requested action." Title="An error occured" IsOpen="False">
+            </ui:InfoBar>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Row="1" Margin="0, 0, 0, 10">
+                <ui:TextBlock Text="Main Page" Style="{StaticResource LargeTextBlock}" Foreground="White"/>
+                <ui:TextBlock Text="The page where all the stuff happens." FontStyle="Italic" Opacity="0.2" Style="{StaticResource DescriptionPageTxt}" Foreground="White"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Row="2">
+
+                <controls:BetterCard Header="User ID" Description="The user ID of the player you want to ban." CardContent="{StaticResource UserIDTextBox}">
+                </controls:BetterCard>
+
+                <controls:BetterCard Header="Reason" Description="The reason you want to ban the player for." CardContent="{StaticResource ReasonTextBox}">
+                </controls:BetterCard>
+
+                <controls:BetterCard Header="Private reason" Description="The private reason you want to ban the player for." CardContent="{StaticResource PrivReasonTextBox}">
+                </controls:BetterCard>
+
+            <controls:BetterCard Header="Duration" Description="How long you want to ban the player for." CardContent="{StaticResource DurationTextBox}" x:Name="DurationCard">
+                </controls:BetterCard>
+
+                <CheckBox Margin="0, 10, 0, 5" Content="Make the ban permanent" x:Name="PermanentCheckBox" Click="PermanentChecked"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" Grid.Row="3" Margin="0, 0, 0, 10">
+                <ui:TextBlock Text="Player Information" Foreground="White" Style="{StaticResource LargeTextBlock}"/>
+                <ui:TextBlock Text="The information of the player." Foreground="White" Style="{StaticResource DescriptionPageTxt}" FontStyle="Italic" Opacity="0.2"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="4" Margin="0, 0, 0, 10" Orientation="Horizontal">
+                <Border CornerRadius="5" Background="{StaticResource ExtraBackground}">
+                    <Image Height="Auto" x:Name="ProfileImg"/>
+                </Border>
+
+                <Grid VerticalAlignment="Center" Margin="10, 0, 0, 0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Orientation="Vertical" Grid.Row="0">
+                        <ui:TextBlock Text="Display Name" Foreground="White" FontWeight="SemiBold" FontSize="20"/>
+                        <Border HorizontalAlignment="Left" Style="{StaticResource PlayerInformationBorder}" Margin="0, 7, 0, 0">
+                            <ui:TextBlock Text="Nab" Style="{StaticResource PlayerInformationTxt}" Foreground="White" x:Name="DisplayNameText"/>
+                        </Border>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Grid.Row="1" Margin="0, 6, 0, 0">
+                        <ui:TextBlock Text="Username" Foreground="White" FontWeight="SemiBold" FontSize="20"/>
+                        <Border Style="{StaticResource PlayerInformationBorder}" Margin="0, 7, 0, 0">
+                            <ui:TextBlock Text="Nab" Style="{StaticResource PlayerInformationTxt}" Foreground="White" x:Name="UsernameText"/>
+                        </Border>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Vertical" Grid.Row="2" Margin="0, 6, 0, 0">
+                        <ui:TextBlock Text="User ID" Foreground="White" FontWeight="SemiBold" FontSize="20"/>
+                        <Border Style="{StaticResource PlayerInformationBorder}" Margin="0, 7, 0, 0">
+                            <ui:TextBlock Text="1234567890" Style="{StaticResource PlayerInformationTxt}" Foreground="White" x:Name="UserIDText"/>
+                        </Border>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+
+        <StackPanel Grid.Row="5" Orientation="Horizontal">
+            <ui:Button Content="Ban" Background="{StaticResource BlueBackground}" Width="425" Height="40" Click="BanClicked"/>
+            <ui:Button Content="Unban" Width="425" Margin="5, 0, 0, 0" Height="40" Click="UnbanClicked"/>
+        </StackPanel>
+    </Grid>
+</ScrollViewer>
