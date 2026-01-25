@@ -1,6 +1,9 @@
 <div align="center">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Roblox_Corporation_2025_logo.svg/640px-Roblox_Corporation_2025_logo.svg.png" Height="300" align="center" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Roblox_%282025%29_%28App_Icon%29.svg/640px-Roblox_%282025%29_%28App_Icon%29.svg.png" Height="300" align="center" />
 </div>
+
+> [!IMPORTANT]
+> why the fuck is this stupid image not working it works on [CodeBerg](https://codeberg.org/NabHeyka/Roblox-Moderation-Application)
 
 <div align="center">
   <br/>
@@ -31,6 +34,10 @@
 The *ROBLOX Moderation Application* is a Windows application to ban ROBLOX rule breakers from your game in a easy way.
 
 **This application is ONLY working for Windows, and is not made in any way from ROBLOX. It's a tool made by NabHeyka. This tool does not have plans for Mobile support.**
+
+
+> [!IMPORTANT]
+> If you plan to make an issue post, please read this below.
 
 # How can i make a good GitHub issue?
 If you're having issue with the application and would like to ask for support, you can open an issue here on the GitHub repo.
